@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>Задача с кофеваркой</title>
+</head>
+
+<body>
+    <h1 class="text-center">Задача с кофеваркой</h1>
+    <img src="http://learn.javascript.ru/article/internal-external-interface/coffee.jpg" alt="Кофеварка">
+
+    <p>Material: <a href="http://learn.javascript.ru/internal-external-interface" title="original source of the task">http://learn.javascript.ru/internal-external-interface</a></p>
+    <script>
+        function CoffeeMachine(power) {
+            "use strict";
+            this.waterAmount = 0; // public property
+
+            var WATER_HEAT_CAPACITY = 4.200;
+
+            var self = this;
+            var boilingTimeout;
+            //Included functions Begin---------------
+
+            function getBoilTime() {
+                var time = self.waterAmount * WATER_HEAT_CAPACITY * 80 / power;
+                return time;
+            }
+
+            function onReady() {
+                console.log('A coffee is ready');
+            }
+
+            //Included functions End ---------------
+
+            this.run = function () {
+                console.log('Swich on');
+                boilingTimeout = setTimeout(onReady, getBoilTime());
+            }
+
+            this.stop = function () {
+                console.log('Swich off');
+                clearTimeout(boilingTimeout);
+            }
+
+            console.log(`A new coffee machine ${power} W is created! `)
+        }
+
+        var coffeeMachine = new CoffeeMachine(110);
+        coffeeMachine.waterAmount = 200;
+        coffeeMachine.run();
+        coffeeMachine.stop();
+        // As result it should do nothing 
+
+    </script>
+</body>
+
+</html>
