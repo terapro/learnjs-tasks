@@ -7,6 +7,7 @@
         - [_1.08.03_ Добавить геттер для power](#10803-%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-%D0%B3%D0%B5%D1%82%D1%82%D0%B5%D1%80-%D0%B4%D0%BB%D1%8F-power)
         - [_1.08.04_ Добавить геттер для power](#10804-%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-%D0%B3%D0%B5%D1%82%D1%82%D0%B5%D1%80-%D0%B4%D0%BB%D1%8F-power)
         - [_1.08.05_ Создать сеттер для onReady](#10805-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D1%82%D1%8C-%D1%81%D0%B5%D1%82%D1%82%D0%B5%D1%80-%D0%B4%D0%BB%D1%8F-onready)
+        - [_1.08.06_ Добавить метод isRunning](#10806-%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4-isrunning)
 
 ## Tasks
 
@@ -57,5 +58,15 @@
 **Description**: Создайте сеттер setOnReady, чтобы код снаружи мог назначить свой onReady
 
 **Solution**: [1.08.05-on-ready.js](1.08.05-on-ready.js)
+
+---
+
+### _1.08.06_ Добавить метод isRunning
+
+**Link**: http://learn.javascript.ru/getters-setters#%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4-isrunning
+
+**Description**: Из внешнего кода мы хотели бы иметь возможность понять – запущена кофеварка или нет.
+
+**Solution**: [1.08.06-is-running.js](1.08.06-is-running.js)
 
 ---
