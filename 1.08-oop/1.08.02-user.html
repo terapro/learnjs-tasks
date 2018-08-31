@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Написать объект с геттерами и сеттерами</h1>
+    <script>
+        function User() {
+            var firstName, surname;
+
+
+            this.setFirstName = (name) => {
+                firstName = name;
+            }
+            this.setSurname = (name) => {
+                surname = name;
+            }
+            this.getFullName = (name) => {
+                return `${firstName} ${surname}`;
+            }
+        }
+
+        var user = new User();
+        user.setFirstName("Петя");
+        user.setSurname("Иванов");
+
+        alert(user.getFullName()); // Петя Иванов
+
+    </script>
+</body>
+
+</html>
